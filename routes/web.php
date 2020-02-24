@@ -77,5 +77,10 @@ Route::get('desalocar', function () {
     $proj = Projeto::find(4);
     if(isset($proj)) {
         $proj->desenvolvedores()->detach([1,2,3]);
+        // ou
+        // $proj->desenvolvedores()->detach(1);
+        // $proj->desenvolvedores()->detach(2);
+        // $proj->desenvolvedores()->detach(3);
+
     }
 });
